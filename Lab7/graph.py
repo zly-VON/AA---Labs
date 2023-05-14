@@ -13,12 +13,3 @@ def generate_complete_graph(nodes):
         dense_graph[u][v]['weight'] = random.randint(1, 10)
 
     return dense_graph
-
-
-def generate_graph(nodes, edges):
-    graph = nx.gnm_random_graph(nodes, edges)
-
-    for node, target in graph.edges():
-        graph[node][target]['weight'] = random.randint(1, 10)
-        
-    return graph
