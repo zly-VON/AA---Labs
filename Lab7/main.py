@@ -22,9 +22,9 @@ def minimum_spanning_tree(nodes_count):
         kruskal(graph)
         kruskal_time.append(round(time.perf_counter() - start_time, 5))
 
-    table = PrettyTable(['Name/Nodes', '10', '50', '100', '150', '200', '250', '300'])
-    table.add_row(['Prim', prim_time[0], prim_time[1], prim_time[2], prim_time[3], prim_time[4], prim_time[5], prim_time[6]])
-    table.add_row(['Kruskal', kruskal_time[0], kruskal_time[1], kruskal_time[2], kruskal_time[3], kruskal_time[4], kruskal_time[5], kruskal_time[6]])
+    table = PrettyTable(['Name/Nodes', '100', '300', '500', '700', '900', '1100', '1300', '1500'])
+    table.add_row(['Prim', prim_time[0], prim_time[1], prim_time[2], prim_time[3], prim_time[4], prim_time[5], prim_time[6], prim_time[7]])
+    table.add_row(['Kruskal', kruskal_time[0], kruskal_time[1], kruskal_time[2], kruskal_time[3], kruskal_time[4], kruskal_time[5], kruskal_time[6], kruskal_time[7]])
     print(table)
     
     plt.plot(nodes_count, prim_time, label='Prim')
@@ -36,5 +36,5 @@ def minimum_spanning_tree(nodes_count):
     plt.show()
 
 
-nodes = [10, 50, 100, 150, 200, 250, 300]
+nodes = [100, 300, 500, 700, 900, 1100, 1300, 1500]
 minimum_spanning_tree(nodes)
